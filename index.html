@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Pokemon</title>
+    <link rel="stylesheet" href="./assets/layout/reset.css" />
+    <link rel="stylesheet" href="./assets/layout/style.css" />
+    <link rel="stylesheet" href="./assets/layout/reponsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css" />
+    <link rel="icon" type="image/png" href="./assets/Img/Logo_Web.png" />
+  </head>
+  <body>
+    <!-- Phần header -->
+    <div id="header">
+      <div id="header-left">
+        <img src="./assets/Img/Logo_Web.png" id="header_logo" />
+        <div id="pokemon">POKEMON</div>
+      </div>
+      <ul id="header-right" class="home-Menu">
+        <li id="Home" class="mg-r menu-header hdhove">HOME</li>
+        <div class="menu--mobile">
+          <li id="Shop" class="mg-r menu-header hdhover">Shop</li>
+          <li id="Order" class="mg-r menu-header hdhover">Your Orders</li>
+          <li id="Blog" class="mg-r menu-header hdhover">Blog</li>
+          <li id="Login" class="mg-r menu-header hdhover">Login</li>
+          <li id="SignUp" class="mg-r menu-header hdhover">SignUp</li>
+          <li id="User" class="mg-r menu-header hdhover">
+            <i class="ti-user"></i>
+          </li>
+        </div>
+    </ul>
+    <div class="menu ti-menu"></div>
+    </div>
+
+    <!-- Phần home -->
+    <div id="HomeSection" class="setup active">
+      <div class="slider-section">
+        <div class="video-container">
+          <video class="myVideo" autoplay loop muted>
+            <source src="./assets/Video/BackGround.mp4" type="video/mp4" />
+          </video>
+          <h1>Welcome to the shop</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần shop -->
+    <div id="ShopSection" class="setup">
+      <div id="card">
+        <div class="card-size" id="card-cmt"></div>
+      </div>
+      <div id="Shopping">
+        <div id="Shopping-category">
+          <div class="category">
+            <label for="price">Giá</label>
+            <select id="price" name="price" class="price">
+              <option value="All">Tất cả</option>
+              <option value="under10">&lt; 10$</option>
+              <option value="under50">&lt; 50$</option>
+              <option value="under100">&lt; 100$</option>
+              <option value="under200">&lt; 200$</option>
+              <option value="over200">&gt; 200$</option>
+            </select>
+          </div>
+
+          <div class="category">
+            <label for="type">Hệ</label>
+            <select id="type" name="type" class="price">
+              <option value="All">Tất cả</option>
+              <option value="Fire">Lửa</option>
+              <option value="Water">Nước</option>
+              <option value="Grass">Cỏ</option>
+              <option value="Electric">Điện</option>
+              <option value="Psychic">Tâm linh</option>
+              <option value="Ice">Băng</option>
+              <option value="Dragon">Rồng</option>
+              <option value="Dark">Bóng tối</option>
+              <option value="Fairy">Tiên</option>
+              <option value="Fighting">Giác đấu</option>
+            </select>
+          </div>
+
+          <button class="category" id="filter-button">Tìm kiếm</button>
+        </div>
+        <section id="Shopping-Card"></section>
+        <div id="pagination">
+          <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+          <span id="pageNumber">Page 1</span>
+          <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Phần footer -->
+      <div class="footer">
+        <div class="footer-left">
+          <img src="./assets/Img/logoVHU en.png" alt="" />
+        </div>
+        <div class="footer-right">
+          <h2>Contact:</h2>
+          <p>Quyen221A290094@st.vhu.edu.vn</p>
+          <p>Sang221A290069@st.vhu.edu.vn</p>
+          <p>Thai221A290066@st.vhu.edu.vn</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần modal -->
+    <div id="modal-shop">
+      <div class="modal-container">
+        <div id="modal-left"></div>
+        <div id="modal-right"></div>
+      </div>
+    </div>
+
+    <!-- Phần order -->
+    <div id="OrderSection" class="setup">
+      <div id="Order-Container">
+        <div id="order--main--left">
+          <div id="Order-left">
+            <p id="CartShop" class="Click bgCl">Shopping Cart</p>
+            <p id="MyOrder" class="Click">My Oder</p>
+          </div>
+          <div id="CartShopSection" class="Cart activeShop"></div>
+          <div id="MyOrderSection" class="Cart">
+            <div id="ValueSearch">
+              <button class="bgCl-Green">Tất Cả</button>
+              <button>Đang Xử Lý</button>
+              <button>Đang Vận Chuyển</button>
+              <button>Hoàn Thành</button>
+            </div>
+            <div id="ValueInfo">
+              <p class="p1"></p>
+              <p class="p2"></p>
+            </div>
+            <div class="CheckValue">
+              <label for="Accept">Tra Cứu thông tin</label>
+              <input type="text" class="tracuu" placeholder="Nhập Mã Đơn hàng" />
+
+              <button
+                type="button"
+                class="phone-search"
+                id="Accept"
+                onclick="fetchOrderDetails()"
+              >
+                Xác Nhận
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <div id="order--main--right">
+          <div class="center">
+            <div id="Order--right--top">
+              <div id="Order--top--left">
+                <span>Sản Phẩm:</span>
+                <div class="Cart--order--Name"></div>
+              </div>
+              <div id="Order--top--center">
+                <span>Số lượng: </span>
+                <div class="Cart--order--Qty"></div>
+              </div>
+              <div id="Order--top--right">
+                <span>Thành Tiền:</span>
+                <div class="Cart--order--money"></div>
+              </div>
+            </div>
+            <div id="before"></div>
+            <div id="Order--right--center">
+              <span>Tổng: </span>
+              <div class="Cart--order--total">0$</div>
+            </div>
+            <div id="Order--right--bottom" class="BuyOrder">
+              <p>Buy all</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần modal_order -->
+    <div id="modal-Order">
+      <div id="modal-order-container">
+        <i class="ti-close close-modal"></i>
+        <div id="modal-order-left">
+          <h2>Hoàn Tất Mua Hàng</h2>
+          <img src="./assets/Img/Logo.png" class="logo" alt="" />
+          <label for="phone-search">Nhập số điện thoại để tra cứu:</label>
+          <input
+            type="text"
+            class="phone-search"
+            placeholder="Nhập số điện thoại"
+          />
+          <button onclick="fetchInfo()">Tra cứu</button>
+        </div>
+        <div id="modal-order-center">
+          <form
+            id="orderForm"
+            action="https://script.google.com/macros/s/AKfycbzDLbANoIX9PP5Kbd82GmSp95snfQnp0JzUadabNOm2amrDP-IlvHSOIG1ReGKs_xRd9g/exec"
+            method="POST"
+            target="_blank"
+          >
+            <label for="name">Tên:</label>
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              placeholder="Họ Và Tên..."
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              placeholder="Email..."
+              required
+            />
+
+            <label for="phone">SĐT:</label>
+            <input
+              type="number"
+              id="phone"
+              name="Phone"
+              placeholder="Phone..."
+              required
+            />
+
+            <label for="address">Địa chỉ:</label>
+            <input
+              type="text"
+              id="address"
+              name="Address"
+              placeholder="Đường,Xã/Phường,Huyện/Quận,Tỉnh/Thành Phố"
+              required
+            />
+
+            <input type="hidden" id="orderDetails" name="OrderDetails" />
+            <input type="hidden" id="total" name="Total" />
+
+            <button type="submit" id="submit">Gửi Đơn Hàng</button>
+          </form>
+        </div>
+        <div id="modal-order-right">
+          <h3>Phương thức thanh toán</h3>
+          <p><img src="./assets/Img/Bank.png" alt="" />Tài khoản ngân hàng</p>
+          <p><img src="./assets/Img/momo.png" alt="" />Thanh Toán bằng MoMo</p>
+          <p><i class="ti-money"></i>Thanh Toán khi nhận được hàng</p>
+          <p>
+            <img src="./assets/Img/paypal.png" alt="" />Thanh Toán bằng PayPal
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Đăng ký, Đăng Nhập -->
+    <div id="LoginSection" class="setup">
+      <div class="center--All">
+        <div class="box--login">
+          <form id="form_login" onsubmit="event.preventDefault(); ">
+            <input
+              type="text"
+              name="Name"
+              id="Name_login"
+              required
+              placeholder="Tên Tài Khoản"
+            />
+            <input
+              type="password"
+              name="Password"
+              id="Password_login"
+              placeholder="Mật Khẩu"
+              autocomplete="on"
+            />
+            <i class="ti-eye"></i>
+            <button type="submit" id="submit_login" onclick="fetchCheckPass()">Đăng Nhập</button>
+            <a href="#" id="Create--Account">Tạo Tài Khoản</a>
+            <a href="#" id="forgotpassword">Quên mật khẩu?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    <div id="SignUpSection" class="setup">
+      <div class="center--All">
+        <div class="box--Signup">
+          <form
+            action="https://script.google.com/macros/s/AKfycbwTuLspc5ENgAGVjRBvCyUM-vLlcLFTir_YdVRiYEY2-C0bYXO1L57GJhq_uQ6IkA7JiQ/exec"
+            id="form--Signup"
+            method="POST"
+            target="_blank"
+          >
+            <div class="a">
+              <input
+                type="text"
+                name="Surname"
+                placeholder="Họ"
+                class="w50"
+                required
+              />
+              <input
+                type="text"
+                name="Name"
+                placeholder="Tên"
+                class="w50"
+                required
+              />
+            </div>
+            <input
+              type="text"
+              name="UserName"
+              id="UserName"
+              placeholder="Tên Đăng Nhập"
+              required
+            />
+            <input
+              type="number"
+              name="Phone"
+              id="Phone"
+              placeholder="Số điện thoại"
+              required
+            />
+            <input type="text" name="Gmail" placeholder="Gmail" required />
+            <input
+              type="password"
+              name="Password"
+              placeholder="Password"
+              required
+              autocomplete="on"
+            />
+            <input
+              type="text"
+              name="Address"
+              placeholder="Địa Chỉ Giao Hàng"
+              required
+            />
+            <input type="submit" value="Đăng Ký" />
+            <div class="b">
+              <span>Bạn đã có tài khoản?</span>
+              <a href="#" id="Login--Account">Đăng Nhập</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- User -->
+    <div id="UserSection" class="setup">
+      <div class="center--All">
+        <nav>
+          <div class="User--info">Thông Tin</div>
+          <div class="User--order">Đơn Hàng</div>
+          <div class="User--security">Bảo Mật</div>
+        </nav>
+        <header>
+          <div id="User--avatar">
+            <img src="./assets/Img/user.png" alt="" />
+            <h2 id="User--Name"></h2>
+        </div>
+        </header>
+        <div class="logout">Đăng Xuất</div>
+        <div id="User--box">
+          <navbar id="User--box--nav">
+            <div class="user-profile">
+              <p>Surname: <span id="profileSurname"></span></p>
+              <p>Name: <span id="profileName"></span></p>
+              <p>Gmail: <span id="profileGmail"></span></p>
+              <p>Phone: <span id="profilePhone"></span></p>
+              <p>Address: <span id="profileAddress"></span></p>
+            </div>
+          </navbar>
+        </div>
+      </div>
+    </div>
+    <div id="BlogSection" class="setup">
+      <!-- code o day Ok -->
+      <div class="Blog--title">Blogs</div>
+      <div class="Blog--content1">
+        <img src="./assets/Img/mewtwo.png" alt="">
+        <p>Chào mừng các bạn đến với chuyên mục Giới thiệu Pokemon mới trên blog của chúng tôi! Trong bài viết này, chúng ta sẽ cùng khám phá những Pokemon mới vừa được tiết lộ trong thế giới Pokemon, mang đến cho người hâm mộ những bất ngờ và trải nghiệm thú vị.
+        </p>
+      </div>
+      <div class="Blog--content2">
+        <img src="./assets/Img/pokemonblog1.jpg" alt="">
+        <p>Pokemon mới luôn thu hút sự chú ý nhờ vào thiết kế ấn tượng và phong cách riêng biệt. Mỗi Pokemon đều mang nét đặc trưng riêng, từ màu sắc, hình dáng cho đến các chi tiết độc đáo, khiến người chơi muốn thu thập và tìm hiểu thêm về chúng. Các Pokemon mới còn có sự kết hợp giữa những yếu tố thiên nhiên và các loài động vật, thậm chí có thể gợi lên hình ảnh của các sinh vật thần thoại hoặc huyền bí.  </p>
+      </div>
+      <div class="Blog--content3">
+        <img src="./assets/Img/pokemonblog2.jpg" alt="">
+        <p>Mỗi Pokemon mới đều có những kỹ năng và loại hình chiến đấu đa dạng, tạo nên chiến thuật độc đáo và làm phong phú thêm trải nghiệm của người chơi. Chúng có thể sở hữu khả năng đặc biệt như biến hình, kiểm soát nguyên tố, hoặc phát triển qua các cấp tiến hóa khác nhau. Việc hiểu rõ kỹ năng của từng Pokemon sẽ giúp người chơi xây dựng đội hình mạnh mẽ và linh hoạt hơn khi tham gia các trận đấu.  </p>
+      </div>
+      <div class="Blog--content4">
+        <img src="./assets/Img/pokemonblog3.jpg" alt="">
+        <p>Nhiều Pokemon mới có khả năng tiến hóa đặc biệt, từ tiến hóa theo cấp độ cho đến Mega Evolution hoặc Dynamax. Khám phá các hình thức tiến hóa này không chỉ tăng sức mạnh mà còn làm thay đổi diện mạo của Pokemon, tạo ra sự bất ngờ và hứng thú cho người chơi.       </p>
+      </div> 
+        <div class="Blog--end">Hãy theo dõi blog của chúng tôi để không bỏ lỡ bất kỳ thông tin nào về các Pokémon mới. Cùng nhau khám phá và thêm những thành viên độc đáo vào đội hình Pokémon của bạn nhé!</div>
+    </div>
+  </body>
+  <script src="./assets/Script/main.js"></script>
+</html>

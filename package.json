@@ -1,0 +1,19 @@
+{
+  "name": "project_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch Api.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "i": "^0.3.7"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  }
+}
